@@ -83,7 +83,7 @@ class WeatherApp(QWidget):
         url = "https://map-geocoding.p.rapidapi.com/json"
         querystring = {"address": address}
         headers = {
-            "x-rapidapi-key": "2d7198105fmsha78df4c828aea6ep182ce4jsn6a513052a904",  # Replace with your actual RapidAPI key
+            "x-rapidapi-key": "",  # Replace with your actual RapidAPI key
             "x-rapidapi-host": "map-geocoding.p.rapidapi.com"
         }
         response = requests.get(url, headers=headers, params=querystring)
@@ -99,7 +99,7 @@ class WeatherApp(QWidget):
         unit = "C" if self.unit_selector.currentText() == "Celsius" else "F"
         querystring = {"q": f"{lat},{lng}", "days": "7", "aqi": "no", "alerts": "no"}
         headers = {
-            "x-rapidapi-key": "2d7198105fmsha78df4c828aea6ep182ce4jsn6a513052a904",  # Replace with your actual RapidAPI key
+            "x-rapidapi-key": "",  # Replace with your actual RapidAPI key
             "x-rapidapi-host": "weatherapi-com.p.rapidapi.com"
         }
         response = requests.get(url, headers=headers, params=querystring)
